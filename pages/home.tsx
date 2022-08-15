@@ -12,18 +12,25 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import {useTranslation} from "next-i18next"
 import { GetStaticProps } from "next";
 
-
+export  const getStaticProps : GetStaticProps = async ({ locale} : any) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
 
 const Home = () => {
   const [loginVisible, setLoginVisible] = useState<boolean>(false);
   const {t}=useTranslation('common')
+  
   const handleLogin = () => {
     setLoginVisible(!loginVisible);
   };
   return (
     <>
       {loginVisible && <LoginModal handleLogin={handleLogin} />}
-      <Navbar VehicleInsurance={t("VehicleInsurance")} handleLogin={handleLogin} />
+      <Navbar LiabilityInsurance={t("LiabilityInsurance")}  PropertyInsurance={t("Property insurance")} VehicleInsurance={t("VehicleInsurance")} handleLogin={handleLogin} />
       <Hero />
       <InsuranceCompanies />
       {/* Not responsive  */}
@@ -39,10 +46,3 @@ const Home = () => {
 export default Home;
 
 
-export  const getStaticProps : GetStaticProps = async ({ locale }:any) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common'])),
-    },
-  };
-}

@@ -9,10 +9,12 @@ import { MobileSide } from "./desktop/MobileSide";
 
 type LoginProps = {
   handleLogin: () => void;
-  VehicleInsurance : string
+  VehicleInsurance : string,
+  PropertyInsurance : string,
+  LiabilityInsurance : string,
 };
 
-export const Navbar = ({ handleLogin }: LoginProps , VehicleInsurance : LoginProps ) => {
+export const Navbar = ({ handleLogin , VehicleInsurance  ,PropertyInsurance , LiabilityInsurance}: LoginProps ) => {
   const [sideVisible, setSideVisible] = useState(false);
   const handleClose = () => {
     setSideVisible(!sideVisible);
@@ -22,19 +24,19 @@ export const Navbar = ({ handleLogin }: LoginProps , VehicleInsurance : LoginPro
       <nav className="nav-sec d-flex-justify-between g-10 f-14 padding">
         <Link href={"/views/car_body_insurance"}>
           <a className="d-flex-center g-5">
-             Vehicle Insurance
+             {VehicleInsurance}
             <Image src={"/icons/arrow-down.svg"} width={11} height={5} />
           </a>
         </Link>
         <Link href={"/"}>
           <a className="d-flex-center g-5">
-            Property insurance
+            {PropertyInsurance}
             <Image src={"/icons/arrow-down.svg"} width={11} height={5} />
           </a>
         </Link>
         <Link href={"/"}>
           <a className="d-flex-center g-5">
-            Liability insurance
+            {LiabilityInsurance}
             <Image src={"/icons/arrow-down.svg"} width={11} height={5} />
           </a>
         </Link>
