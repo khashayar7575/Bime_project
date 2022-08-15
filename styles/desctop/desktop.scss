@@ -1,0 +1,377 @@
+@import "../variables/colors.scss";
+
+.hero-sec {
+  height: 100vh;
+  // min-height: 1025px;
+  // min-height: 900px;
+
+  align-items: center;
+  background-color: $colorbg;
+  position: relative;
+  overflow: hidden;
+  .hero-contents {
+    position: absolute;
+    // top: 50%;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+
+    .hero-texts {
+      display: flex;
+
+      flex-direction: column;
+      h1 {
+        margin-bottom: 51px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        color: $black;
+      }
+      h2 {
+        margin-bottom: 36px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        color: $primary !important;
+      }
+      p {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+    .hero-img {
+      width: 550px;
+      overflow: hidden;
+      height: 389px;
+      img {
+        object-position: center;
+      }
+    }
+  }
+  .dvider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    .bottom-text {
+      position: absolute;
+
+      bottom: 15px;
+      left: 50%;
+      transform: translate(-50%);
+      color: $colorbg;
+      h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 100%;
+        text-align: center;
+      }
+      .icon {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+      }
+    }
+    img {
+      object-position: top;
+      width: 100%;
+    }
+    z-index: 1;
+  }
+}
+
+// insurance companies sec
+
+.insurance-sec {
+  gap: 88px;
+  .insurance-contents {
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: repeat(5, 140px);
+    align-items: center;
+    row-gap: 58px !important;
+    .insurance-item {
+      width: 140px;
+      height: 140px;
+      box-shadow: 0px 0px 12px rgba(12, 89, 122, 0.11);
+      border-radius: 20px;
+      background-color: $colorbg;
+      .icon {
+        width: 80px;
+        height: 80px;
+      }
+      .icon-2 {
+        width: 62px;
+        height: 62px;
+      }
+      .text {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+  .view-all {
+    width: 100%;
+    button {
+      span {
+        .icon {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+// insurance-footer section
+
+.insurance-footer {
+  background: rgba(167, 130, 39, 0.15);
+  height: 280px;
+  .insurance-footer-contents {
+    width: 100%;
+    transform: translateY(-41%);
+    .insurance-footer-content {
+      width: 351px;
+      .icon-item {
+        border-radius: 100px;
+        width: 80px;
+        height: 80px;
+        background-color: $colorbg;
+        box-shadow: 0px 0px 12px rgba(12, 89, 122, 0.11);
+      }
+      .title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 29px;
+        text-align: center;
+      }
+      .text {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 33px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// online services section
+.online-services-sec {
+  .online-services-contents {
+    margin-top: 80px;
+    .online-services-item {
+      height: 200px;
+      width: 430px;
+      background: #ffffff;
+      box-shadow: 0px 0px 12px rgba(12, 89, 122, 0.11);
+      border-radius: 20px;
+      .online-services-inner {
+        transform: translateY(-20%);
+        .icon {
+        }
+        .title {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 29px;
+        }
+        .text {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 19px;
+          color: $secondary;
+        }
+        .btn-g-radius {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+}
+
+// blog section
+.blog-comp {
+  width: 392px;
+  height: 468px;
+  background: $colorbg;
+  justify-content: space-between;
+  border: 2px solid #d6eef2;
+  border-radius: 32px;
+  .image {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .title {
+    // text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .desc-one {
+    .date {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 23px;
+    }
+    .comment-num {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color: $secondary;
+    }
+  }
+  .text {
+    // text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $secondary;
+  }
+  .btn-g-radius {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    width: fit-content;
+  }
+}
+.blog-sec {
+  min-height: 400px;
+  position: relative;
+  .arrows {
+    position: absolute;
+    top: 0;
+    right: 102px;
+    img {
+      cursor: pointer;
+    }
+  }
+  .blog-contents {
+    margin-top: 60px;
+    background: url("/blog-bg.svg");
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 511px;
+    .slider-wrapper {
+      width: 100%;
+
+      .blogs-slider {
+        // overflow: hidden;
+        .swiper-wrapper {
+          .swiper-slide {
+            width: fit-content !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// comments section
+.comments-sec {
+  min-height: 400px;
+  overflow: hidden;
+  .comments-contents {
+    .comment-content {
+      width: 40%;
+      .title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 34px;
+      }
+      .text {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+    .comment {
+      position: relative;
+      width: 604px;
+      height: 249px;
+
+      .comment-back {
+        position: absolute;
+        background: #ffffff;
+        box-shadow: 0px 0px 12px rgba(12, 89, 122, 0.11);
+        border-radius: 20px;
+        z-index: 1;
+        transform: skewX(-5deg);
+        width: 604px;
+        height: 249px;
+        top: 0;
+        left: 0;
+        // height: fit-content;
+      }
+      .comment-cont {
+        position: absolute;
+        width: 604px;
+        height: 249px;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        .name {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 22px;
+        }
+        .text {
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+}
+// companies section
+.companies-sec {
+  min-height: 400px;
+  .companies-contents {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+
+// footer section
+.footer-sec {
+  // height: 452px;
+  width: 100%;
+  background-color: $secondary;
+
+  .footer-contents {
+    grid-template-columns: repeat(4, 1fr);
+    .footer-item {
+      color: $colorbg;
+      .store {
+        width: 146px;
+        height: 42px;
+      }
+      .title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+      }
+      .text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+  }
+  .copy-right {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $colorbg;
+  }
+}

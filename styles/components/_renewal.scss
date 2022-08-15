@@ -1,0 +1,88 @@
+@import "../variables/colors.scss";
+
+.renewal-sec {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: $black-light;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999999;
+  padding: 40px 0px 40px 0px;
+  overflow-y: auto;
+
+  .renewal-wrapp {
+    position: relative;
+    .close {
+      position: absolute;
+      width: 35px;
+      height: 31px;
+      top: 30px;
+      right: 30px;
+      cursor: pointer;
+    }
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 30px;
+    justify-content: space-between;
+    gap: 10px;
+    .contents {
+      .insurance-det {
+        width: 16px;
+        height: 3px;
+        background-color: $primary;
+        border-radius: 4px;
+        transform: rotate(90deg);
+      }
+
+      .detail-box {
+        background: #fcf2f2;
+        border-radius: 14px;
+        height: 229px;
+        width: 100%;
+        padding: 20px;
+        .part1,
+        .part2 {
+          justify-content: space-between;
+          height: 100%;
+        }
+      }
+      .renewal-form {
+        .discount-field {
+          border: 1px solid #ebd2cd;
+          border-radius: 12px;
+          height: 50px;
+          padding: 10px;
+          button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: $third;
+            cursor: pointer;
+          }
+        }
+      }
+      .pay-from {
+        background: #fffdfd;
+        box-shadow: 0px 0px 12px rgba(53, 23, 23, 0.09);
+        border-radius: 12px;
+        padding: 10px;
+        width: 100%;
+        height: 88px;
+        .amount-num {
+          color: $secondary;
+        }
+        .pay-num {
+          color: $primary;
+        }
+      }
+    }
+
+    .btn-g {
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "./variables/colors.scss";
+
+.nav-sec {
+  display: flex;
+  width: 100%;
+  // position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  a {
+    transition: 0.3s ease;
+  }
+  a:hover {
+    color: $primary;
+  }
+}
+.mobile-nav-sec {
+  display: none;
+  svg {
+    font-size: 30px;
+    color: $primary;
+    cursor: pointer;
+  }
+}
+
+.mobileside-sec {
+  width: 50%;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  transition: 0.5s ease;
+  // transform: translateX(-100%);
+  // opacity: 0;
+  // visibility: none;
+  background-color: $secondary;
+  color: $colorbg;
+  a {
+    span {
+      color: $colorbg;
+    }
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    svg {
+      font-size: 30px;
+    }
+  }
+}

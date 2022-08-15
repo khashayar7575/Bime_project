@@ -1,0 +1,50 @@
+@import "../variables/colors.scss";
+
+.faq-sec {
+  margin-bottom: 200px;
+  .faq-wrapper {
+    background: $colorbg;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+    min-height: 790px;
+    justify-content: center;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    @media screen and (max-width: 769px) {
+      grid-template-columns: 1fr;
+      gap: 10px !important;
+    }
+    .faq-sidebar {
+      height: fit-content;
+      background: #ffffff;
+      border: 1.5px solid #ebd2cd;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: flex-start;
+      h4 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+      }
+      .text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: $primary;
+        padding: 10px;
+        width: 100%;
+        cursor: pointer;
+        &:hover {
+          background: rgba(238, 59, 52, 0.22);
+        }
+      }
+    }
+    .faq-accordeon {
+    }
+  }
+}

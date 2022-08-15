@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+
+// component styles
+@import "./components/login";
+@import "./components/breadCrumb";
+@import "./components/carbodyinsurance";
+@import "./components/aboutCar";
+@import "./components/aboutUs.scss";
+@import "./components/faq.scss";
+@import "./components/accordeon.scss";
+@import "./components/profile.scss";
+@import "./components/renewal";
+
+@import "./responsive.scss";
+@import "./reuseable.scss";
+@import "./navbar.scss";
+@import "./desctop/desktop.scss";
+@import "./desctop/swiper.scss";
+@import "./variables/texts.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+select {
+  border: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+// material Ui
+.css-ahj2mt-MuiTypography-root {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  line-height: 19px !important;
+}
+
+.css-uvvswg-MuiButtonBase-root-MuiAccordionSummary-root {
+  background-color: transparent !important;
+}
+
+.css-ta84vm-MuiAccordionDetails-root {
+  border-top: none !important;
+}
