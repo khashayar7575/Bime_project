@@ -2,16 +2,16 @@ import React from "react";
 import { Navbar } from "../Navbar";
 import Image from "next/image";
 
-export const Hero = () => {
+
+export const Hero = ({Insurance,CompareAndBuyInsuranceOnline,companySlogan,CompareInsuranceCompanies}) => {
   return (
     <div className="hero-sec ">
       <div className="hero-contents padding">
         <div className="hero-texts">
-          <h1>Insurance</h1>
-          <h2>Compare and buy insurance online</h2>
+          <h1>{Insurance}</h1>
+          <h2>{CompareAndBuyInsuranceOnline}</h2>
           <p>
-            The possibility of easy comparison and suitable choice among
-            different insurance companies according to your conditions
+            {companySlogan}
           </p>
         </div>
         <div className="hero-img">
@@ -26,7 +26,7 @@ export const Hero = () => {
       </div>
       <div className="dvider d-flex-center">
         <div className="bottom-text d-flex-col-center">
-          <h2 className="text">Compare insurance companies</h2>
+          <h2 className="text">{CompareInsuranceCompanies}</h2>
           <img className="icon" src={"/icons/show-more-icon.svg"} />
         </div>
         <img

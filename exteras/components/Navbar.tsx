@@ -12,9 +12,14 @@ type LoginProps = {
   VehicleInsurance : string,
   PropertyInsurance : string,
   LiabilityInsurance : string,
+  DamageOnline : string,
+  PeopleInsurance : string,
+  InsuranceCompanies : string,
+  Blog : string,
+  SignUp : string,
 };
 
-export const Navbar = ({ handleLogin , VehicleInsurance  ,PropertyInsurance , LiabilityInsurance}: LoginProps ) => {
+export const Navbar = ({ handleLogin , VehicleInsurance  ,PropertyInsurance , LiabilityInsurance , DamageOnline , PeopleInsurance ,InsuranceCompanies,Blog,SignUp}: LoginProps ) => {
   const [sideVisible, setSideVisible] = useState(false);
   const handleClose = () => {
     setSideVisible(!sideVisible);
@@ -42,30 +47,30 @@ export const Navbar = ({ handleLogin , VehicleInsurance  ,PropertyInsurance , Li
         </Link>
         <Link href={"/"}>
           <a className="d-flex-center g-5">
-            Damage online
+            {DamageOnline}
             <Image src={"/icons/arrow-down.svg"} width={11} height={5} />
           </a>
         </Link>
         <Link href={"/"}>
           <a className="d-flex-center g-5">
-            People insurance
+            {PeopleInsurance}
             <Image src={"/icons/arrow-down.svg"} width={11} height={5} />
           </a>
         </Link>
         <Link href={"/"}>
           <a className="d-flex-center g-5">
-            Inaurance companies
+            {InsuranceCompanies}
             <Image src={"/icons/arrow-down.svg"} width={11} height={5} />
           </a>
         </Link>
         <Link href={"/"}>
           <a className="d-flex-center g-5">
-            Blog
+            {Blog}
             <Image src={"/icons/arrow-down.svg"} width={11} height={5} />
           </a>
         </Link>
         <button className="btn-g" onClick={() => handleLogin()}>
-          Sign up / Login
+          {SignUp}
         </button>
       </nav>
       <div className="mobile-nav-sec padding" onClick={() => handleClose()}>
