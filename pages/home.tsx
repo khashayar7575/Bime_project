@@ -8,17 +8,22 @@ import { Comments } from "../exteras/components/desktop/Comments";
 import { Companies } from "../exteras/components/desktop/Companies";
 import { Footer } from "../exteras/components/desktop/Footer";
 import { LoginModal } from "../exteras/components/modal/LoginModal";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import {useTranslation} from "next-i18next"
+import { GetStaticProps } from "next";
+
+
 
 const Home = () => {
   const [loginVisible, setLoginVisible] = useState<boolean>(false);
-
+  const {t}=useTranslation('common')
   const handleLogin = () => {
     setLoginVisible(!loginVisible);
   };
   return (
     <>
       {loginVisible && <LoginModal handleLogin={handleLogin} />}
-      <Navbar handleLogin={handleLogin} />
+      <Navbar VehicleInsurance={t("VehicleInsurance")} handleLogin={handleLogin} />
       <Hero />
       <InsuranceCompanies />
       {/* Not responsive  */}
@@ -34,3 +39,10 @@ const Home = () => {
 export default Home;
 
 
+export  const getStaticProps : GetStaticProps = async ({ locale }:any) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+}

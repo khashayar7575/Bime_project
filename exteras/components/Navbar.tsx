@@ -3,28 +3,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineAlignLeft } from "react-icons/ai";
 import { MobileSide } from "./desktop/MobileSide";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import {useTranslation} from "next-i18next"
-import { GetStaticProps } from "next";
+
+
 
 
 type LoginProps = {
   handleLogin: () => void;
+  VehicleInsurance : string
 };
 
-export const Navbar = ({ handleLogin }: LoginProps ) => {
+export const Navbar = ({ handleLogin }: LoginProps , VehicleInsurance : LoginProps ) => {
   const [sideVisible, setSideVisible] = useState(false);
   const handleClose = () => {
     setSideVisible(!sideVisible);
   };
-  const {t}=useTranslation('common')
-
   return (
     <>
       <nav className="nav-sec d-flex-justify-between g-10 f-14 padding">
         <Link href={"/views/car_body_insurance"}>
           <a className="d-flex-center g-5">
-          {t('VehicleInsurance')}
+             Vehicle Insurance
             <Image src={"/icons/arrow-down.svg"} width={11} height={5} />
           </a>
         </Link>
@@ -76,10 +74,3 @@ export const Navbar = ({ handleLogin }: LoginProps ) => {
   );
 };
 
-export  const getStaticProps : GetStaticProps = async ({ locale }:any) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common'])),
-    },
-  };
-}
