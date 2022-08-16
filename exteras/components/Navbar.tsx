@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineAlignLeft } from "react-icons/ai";
 import { MobileSide } from "./desktop/MobileSide";
-
+import { useRouter } from 'next/router'
 
 
 
@@ -24,6 +24,9 @@ export const Navbar = ({ handleLogin , VehicleInsurance  ,PropertyInsurance , Li
   const handleClose = () => {
     setSideVisible(!sideVisible);
   };
+  const {locale} = useRouter()
+
+
   return (
     <>
       <nav className="nav-sec d-flex-justify-between g-10 f-14 padding">
