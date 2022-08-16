@@ -3,10 +3,10 @@ import { Navbar } from "../Navbar";
 import Image from "next/image";
 import { BlogsSlider } from "./BlogsSlider";
 
-export const Blog = () => {
+export const Blog = ({Blog}) => {
   return (
     <div className="blog-sec ">
-      <div className="sec-title">Blog</div>
+      <div className="sec-title">{Blog}</div>
       <div className="blog-contents">
         <div className="slider-wrapper padding-2">
           <BlogsSlider />

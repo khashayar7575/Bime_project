@@ -39,9 +39,35 @@ const CarBodyInsurance = () => {
       />
       <BreadCrumb title={"car_body_insurance"} />
       <div className="padding-2">
-        <CarBodyInsuranceComp />
+        <CarBodyInsuranceComp
+        EnterCarDetails={t("EnterCarDetails")}
+        withoutNumberPallet={t("withoutNumberPallet")}
+        CarBodyInsurance={t("CarBodyInsurance")}
+        SeeInsurancePrices={t("SeeInsurancePrices")}
+        />
       </div>
-      <Footer />
+      <Footer 
+      ContactInformation={t("ContactInformation")}
+      location={t("location")}
+      phoneNumber
+      Email={t("Email")}
+      AboutUs={t("AboutUs")}
+      PrivacyAndPolicy={t("PrivacyAndPolicy")}
+      FAQ={t("FAQ")}
+      Cooperation={t("CooperationWithInsuranceAgents")}
+      contactUs={t("contactUs")}
+      JobOffers={t("JobOffers")}
+      Services={t("Services")}
+      OnlineDamage={t("OnlineDamage")}
+      ThirdPartyInsurance={t("ThirdPartyInsurance")}
+      CarBodyIncurance={t("CarBodyIncurance")}
+      lifeInsurance={t("lifeInsurance")}
+      FireIncurance={t("FireIncurance")}
+      MotorcycleInsurance={t("MotorcycleInsurance")}
+      TreatmentInsurance={t("TreatmentInsurance")}
+      DownloadApplication={t("DownloadApplication")}
+      Copyright={t("Copyright © 1996–2022 Bime.com™. All rights reserved.")}
+      />
     </>
   );
 };

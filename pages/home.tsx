@@ -60,11 +60,11 @@ const Home = () => {
        medical={t("medical")}
        view={t("viewAllInsurances")}
        safe={t("SafeAndAffordablePurchase")}
-       getInsurance={t("GetTheInsuranceYouWantEasilyAndAtAReasonablePrice")}
+       getInsurance={t("GetTheInsuranceYouWantEasilyAndAtAReasonablePrice.")}
        HourSupport={t("24HourSupport")}
        haveQues={t("IfYouHaveAnyQuestionsOrDoubts,YouCanContactOurSupport.")}
        choose={t("ChoosingTheMostSuitableInsurance")}
-       possibility={t("ThereAreManyPossibilitiesToCompareAndPrepareYourDesiredInsurance")}
+       possibility={t("ThereAreManyPossibilitiesToCompareAndPrepareYourDesiredInsurance.")}
        />
       {/* Not responsive  */}
       <OnlineServices
@@ -75,10 +75,34 @@ const Home = () => {
       OnlineCarDamagePayment={t("OnlineCarDamagePayment")}
       PaymentOfDamages={t("PaymentOfDamagesInThreeStages")}
       />
-      <Blog />
-      <Comments />
+      <Blog Blog={t("Blog")} />
+      <Comments 
+      UserCommentsAboutUs={t("UserCommentsAboutUs")} 
+      CommentsThatUsersHaveMade={t("CommentsThatUsersHaveMadeAboutUsAndTheirExperiencesUsingOurServices.")}
+      />
       <Companies />
-      <Footer />
+      <Footer 
+      ContactInformation={t("ContactInformation")}
+      location={t("location")}
+      phoneNumber
+      Email={t("Email")}
+      AboutUs={t("AboutUs")}
+      PrivacyAndPolicy={t("PrivacyAndPolicy")}
+      FAQ={t("FAQ")}
+      Cooperation={t("CooperationWithInsuranceAgents")}
+      contactUs={t("contactUs")}
+      JobOffers={t("JobOffers")}
+      Services={t("Services")}
+      OnlineDamage={t("OnlineDamage")}
+      ThirdPartyInsurance={t("ThirdPartyInsurance")}
+      CarBodyIncurance={t("CarBodyIncurance")}
+      lifeInsurance={t("lifeInsurance")}
+      FireIncurance={t("FireIncurance")}
+      MotorcycleInsurance={t("MotorcycleInsurance")}
+      TreatmentInsurance={t("TreatmentInsurance")}
+      DownloadApplication={t("DownloadApplication")}
+      Copyright={t("Copyright © 1996–2022 Bime.com™. All rights reserved.")}
+      />
     </>
   );
 };
