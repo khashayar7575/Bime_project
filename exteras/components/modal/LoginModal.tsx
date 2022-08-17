@@ -4,9 +4,21 @@ import { AiFillCheckCircle } from "react-icons/ai";
 
 type LoginProps = {
   handleLogin: () => void;
+  EnteredCode : string
+  WelcomeBackTo : string
+  Error : string
+  Insurance : string
+  Login: string
+  EnterYourPhoneNumber : string
+  phone : string
+  termsAndConditions : string
+  SendCode : string
+  VerificationCode : string
+  notRecieveCode : string
+  SendAgain : string
 };
 
-export const LoginModal = ({ handleLogin }: LoginProps) => {
+export const LoginModal = ({SendAgain,notRecieveCode,VerificationCode,SendCode,termsAndConditions,handleLogin ,EnteredCode ,WelcomeBackTo,Error,Insurance,Login,EnterYourPhoneNumber,phone }: LoginProps) => {
   const [checked, setChecked] = useState<boolean>(false);
   const [code, setCode] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
@@ -27,17 +39,17 @@ export const LoginModal = ({ handleLogin }: LoginProps) => {
     <div className="login-sec">
       {error && (
         <div className="error-box">
-          <div className="error-text">Error!</div>
+          <div className="error-text">{Error}</div>
           <div className="error-desc">
-            Entered code is not correct, please try again
+            {EnteredCode}
           </div>
         </div>
       )}
       <div className="login-wrapp">
         <div className="wellcome-part">
           <div className="wellcome-part-content d-flex-col g-20">
-            <h2 className="t1">Welcome back to</h2>
-            <h2 className="t2">Insurance</h2>
+            <h2 className="t1">{WelcomeBackTo}</h2>
+            <h2 className="t2">{Insurance}</h2>
           </div>
         </div>
         <div className="form-part">
@@ -45,15 +57,15 @@ export const LoginModal = ({ handleLogin }: LoginProps) => {
             <img src="/icons/fi-rr-cross.svg" alt="" />
           </div>
           <div className="form-part-content d-flex-col g-20">
-            <h2 className="t1">Log In</h2>
+            <h2 className="t1">{Login}</h2>
             {!code ? (
               <div className="form-inner">
                 <h3 className="t2">
-                  Enter your phone number in order to recieve verification code
+                  {EnterYourPhoneNumber}
                 </h3>
                 <div className="form-sec">
                   <form action="" className="d-flex-col g-5">
-                    <label htmlFor="phone-num">Phone number</label>
+                    <label htmlFor="phone-num">{phone}</label>
                     <div className="inputs d-flex-center">
                       <select name="" id="phone-num">
                         <option>+1</option>
@@ -71,14 +83,14 @@ export const LoginModal = ({ handleLogin }: LoginProps) => {
                       >
                         {checked && <AiFillCheckCircle />}
                       </span>
-                      <span>I agree with terms & conditions</span>
+                      <span>{termsAndConditions}</span>
                     </div>
                     <div className="submit">
                       <button
                         className="btn-g d-flex-center"
                         onClick={sendCodeHandler}
                       >
-                        Send Code
+                        {SendCode}
                       </button>
                     </div>
                   </form>
@@ -89,7 +101,7 @@ export const LoginModal = ({ handleLogin }: LoginProps) => {
                 <h3 className="t2">Enter the code sent to +123456789</h3>
                 <div className="form-sec">
                   <form action="" className="d-flex-col g-5">
-                    <label htmlFor="phone-num">Verification code</label>
+                    <label htmlFor="phone-num">{VerificationCode}</label>
                     <div className="verification d-flex-center g-10">
                       <input type="text" />
                       <input type="text" />
@@ -98,12 +110,12 @@ export const LoginModal = ({ handleLogin }: LoginProps) => {
                     </div>
                     <div className="time">00:12</div>
                     <div className="terms-and-conditions d-flex-center g-5">
-                      <span>Didn’t recieve code?</span>
+                      <span>{notRecieveCode}</span>
                       <span
                         className="send-again"
                         onClick={() => handleChecked()}
                       >
-                        Send again
+                        {SendAgain}
                       </span>
                     </div>
                     <div className="submit">
@@ -111,7 +123,7 @@ export const LoginModal = ({ handleLogin }: LoginProps) => {
                         className="btn-g d-flex-center"
                         onClick={loginHandler}
                       >
-                        Login
+                        {Login}
                       </button>
                     </div>
                   </form>

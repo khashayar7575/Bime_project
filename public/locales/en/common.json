@@ -74,5 +74,17 @@
     "TableOfContents":"Table of contents",
     "General":"General",
     "Insurances":"Insurances",
-    "Payment":"Payment"
+    "Payment":"Payment",
+    "EnteredCode":" Entered code is not correct, please try again",
+    "WelcomeBackTo":"Welcome back to",
+    "Error":"Error!",
+    "Login":"Log In",
+    "EnterYourPhoneNumber":"Enter your phone number in order to recieve verification code",
+    "phone":"Phone number",
+    "termsAndConditions":"I agree with terms & conditions",
+    "SendCode":"Send Code",
+    "VerificationCode":"Verification code",
+    "notRecieveCode":"Didn’t recieve code?",
+    "SendAgain":"Send again"
+
 }

@@ -29,7 +29,22 @@ const Home = () => {
   };
   return (
     <>
-      {loginVisible && <LoginModal handleLogin={handleLogin} />}
+      {loginVisible && 
+      <LoginModal 
+      handleLogin={handleLogin}
+       EnteredCode={t("EnteredCode")}
+        WelcomeBackTo={t("WelcomeBackTo")}
+        Error={t("Error")}
+        Insurance={t("Insurance")}
+        Login={t("Login")}
+        EnterYourPhoneNumber={t("EnterYourPhoneNumber")}
+        phone={t("phone")}
+        termsAndConditions={t("termsAndConditions")}
+        SendCode={t("SendCode")}
+        VerificationCode={t("VerificationCode")}
+        notRecieveCode={t("notRecieveCode")}
+        SendAgain={t("SendAgain")}
+        />}
       <Navbar 
       LiabilityInsurance={t("LiabilityInsurance")}  
       PropertyInsurance={t("Property insurance")} 
