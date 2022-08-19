@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
 import { AiFillCheckCircle } from "react-icons/ai";
+
 
 type LoginProps = {
   handleLogin: () => void;
@@ -35,6 +35,7 @@ export const LoginModal = ({SendAgain,notRecieveCode,VerificationCode,SendCode,t
     event.preventDefault();
     setError(!error);
   };
+
   return (
     <div className="login-sec">
       {error && (
